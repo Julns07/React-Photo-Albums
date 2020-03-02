@@ -1,0 +1,20 @@
+import React from "react"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import "../styles/app.css"
+import "../actions/data.js"
+
+import Home from "./Home"
+import Album from "./Album"
+import Picture from "./Picture"
+
+export default props => {
+  return (
+    <Router>
+      <div className="wrapper">
+        <Route exaxt path="/" component={Home} />
+        <Route path="/album/:id" component={Album} />
+        <Route path="/picture/:id" component={Picture} />
+      </div>
+    </Router>
+  )
+}
